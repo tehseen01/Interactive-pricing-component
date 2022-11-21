@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- displays site properly based on user's device -->
+    <link rel="stylesheet" href="style.css" />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="./images/favicon-32x32.png"
+    />
+
+    <title>Frontend Mentor | Interactive pricing component</title>
+
+    <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
+  </head>
+  <body>
+    <main>
+      <div class="text-box">
+        <h1 class="title">Simple, traffic-based pricing</h1>
+        <p class="disc">
+          Sign-up for our 30-day trial. No credit card required.
+        </p>
+      </div>
+      <article>
+        <div class="price-container">
+          <p class="pageview-box">
+            <span id="pageviews"></span>Pageviews
+          </p>
+          <div class="slider-box">
+            <input type="range" name="" id="slider" />
+            <div id="progressBar"></div>
+          </div>
+          <p class="price-box">
+            <span id="price">$16.00</span> /month
+          </p>
+        </div>
+        <div class="biling-container">
+          <p>Monthly Billing</p>
+          <button class="toggle"><div></div></button>
+          <p>
+            Yearly Billing <p class="discount">-25%<span> discount</span></p>
+          </p>
+        </div>
+        
+        <div>
+          <div class="offer-container">
+            <p>
+              <img src="./images/icon-check.svg" alt="" /> Unlimited websites
+            </p>
+            <p>
+              <img src="./images/icon-check.svg" alt="" /> 100% data ownership
+            </p>
+            <p><img src="./images/icon-check.svg" alt="" /> Email reports</p>
+          </div>
+          <button class="btn">Start my trial</button>
+        </div>
+      </article>
+    </main>
+
+    <script src="./index.js"></script>
+  </body>
+</html>

@@ -1,0 +1,253 @@
+@import url("https://fonts.googleapis.com/css2?family=Manrope:wght@600;800&display=swap");
+
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background: no-repeat url(./images/bg-pattern.svg);
+  color: hsl(225, 20%, 60%);
+  font-size: 0.93rem;
+  font-family: "Manrope", sans-serif;
+}
+
+main {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  min-height: 100vh;
+  text-align: center;
+  max-width: 90vw;
+  margin: auto;
+}
+.title {
+  color: hsl(227, 35%, 25%);
+  font-weight: 800;
+  font-size: 1.3rem;
+  margin-bottom: 0.5rem;
+}
+.disc {
+  padding: 0 4rem;
+  line-height: 1.8;
+}
+article {
+  background: #fff;
+  padding: 1.5rem;
+  min-width: 90vw;
+  border-radius: 10px;
+  box-shadow: 2px 20px 20px rgba(0, 0, 0, 0.05);
+}
+.text-box {
+  background: no-repeat url(./images/pattern-circles.svg) center;
+  padding: 3rem 0;
+}
+
+.pageview-box {
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+.slider-box {
+  position: relative;
+  margin: 2rem 0;
+}
+
+#slider {
+  background-color: hsl(223, 50%, 87%);
+  width: 100%;
+  height: 0.5rem;
+  -webkit-appearance: none;
+  border-radius: 10px;
+  z-index: 99;
+}
+#progressBar {
+  width: 50%;
+  height: 0.5rem;
+  background-color: hsl(174, 77%, 80%);
+  position: absolute;
+  top: 0.5rem;
+  border-radius: 10px;
+  z-index: 1;
+}
+
+#slider::-webkit-slider-thumb {
+  background: no-repeat url(./images/icon-slider.svg) center, hsl(174, 86%, 45%);
+  -webkit-appearance: none;
+  border-radius: 50%;
+  z-index: 3;
+  cursor: pointer;
+  width: 2.5rem;
+  height: 2.5rem;
+  position: relative;
+  box-shadow: 0 10px 20px hsl(174, 77%, 80%);
+}
+#slider::-moz-range-thumb {
+  background: no-repeat url(./images/icon-slider.svg) center, hsl(174, 86%, 45%);
+  -webkit-appearance: none;
+  border-radius: 50%;
+  cursor: pointer;
+  width: 2.5rem;
+  height: 2.5rem;
+  position: relative;
+  box-shadow: 0 10px 20px hsl(174, 77%, 80%);
+  outline: none;
+  border: none;
+  z-index: 99;
+}
+
+.price-box {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+}
+
+#price {
+  font-size: 2rem;
+  font-weight: 800;
+  color: hsl(227, 35%, 25%);
+}
+
+.biling-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: 2rem 0;
+  border-bottom: 1px solid hsl(223, 50%, 87%);
+  padding-bottom: 2rem;
+  font-size: 0.8rem;
+}
+
+.toggle {
+  background-color: hsl(223, 50%, 87%);
+  border-radius: 20px;
+  width: 3rem;
+  height: 1.5rem;
+  display: flex;
+  padding: 0.2rem;
+  align-items: center;
+  cursor: pointer;
+  outline: none;
+  border: none;
+  transition: all 0.5s ease;
+}
+.toggle:hover {
+  background-color: hsl(174, 86%, 45%);
+}
+
+.left-right {
+  justify-content: end;
+}
+
+.toggle div {
+  background-color: hsl(224, 65%, 95%);
+  width: 1rem;
+  height: 1rem;
+  border-radius: 50%;
+}
+
+.discount {
+  background-color: hsl(14, 92%, 95%);
+  color: hsl(15, 100%, 70%);
+  border-radius: 10px;
+  padding: 0.2rem 0.4rem;
+}
+.discount span {
+  display: none;
+}
+
+.offer-container {
+  margin-bottom: 2rem;
+}
+.offer-container p {
+  margin: 0.5rem 0;
+}
+
+.offer-container img {
+  padding-right: 0.8rem;
+}
+
+.btn {
+  outline: none;
+  border: none;
+  border-radius: 20px;
+  padding: 0.8rem 2rem;
+  background-color: hsl(227, 35%, 25%);
+  color: hsl(226, 100%, 87%);
+  cursor: pointer;
+}
+.btn:hover {
+  color: #fff;
+}
+
+@media (min-width: 900px) {
+  main {
+    min-height: auto;
+    margin-bottom: 5rem;
+  }
+  article {
+    min-width: 38vw;
+    padding: 2rem 3rem;
+  }
+  .title {
+    font-size: revert;
+  }
+  .text-box {
+    margin-top: 3.5rem;
+    margin-bottom: 2.5rem;
+  }
+  .discount span {
+    display: inline-block;
+    padding-left: 0.2rem;
+  }
+  .biling-container {
+    margin-bottom: 0;
+    margin-top: 1rem;
+    padding-bottom: 2.5rem;
+    justify-content: end;
+    gap: 1rem;
+  }
+  div:has(.btn) {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-top: 1rem;
+  }
+  #price {
+    font-size: 2.8rem;
+  }
+  .offer-container {
+    font-size: 0.8rem;
+    margin: 0;
+    text-align: left;
+  }
+  .price-container {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-areas: "view price" "slider slider";
+    align-items: center;
+  }
+
+  .slider-box {
+    grid-area: slider;
+    justify-self: center;
+    align-self: center;
+    width: 100%;
+  }
+  .pageview-box {
+    grid-area: view;
+    text-align: left;
+    letter-spacing: 2px;
+  }
+  .price-box {
+    grid-area: price;
+  }
+  .btn {
+    margin-top: 1rem;
+  }
+}
