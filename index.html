@@ -27,20 +27,22 @@
       <article>
         <div class="price-container">
           <p class="pageview-box">
-            <span id="pageviews"></span>Pageviews
+            <span id="pageviews">100K </span>Pageviews
           </p>
-          <form class="slider-box">
-            <label for="slider"></label>
-            <input type="range" id="slider" />
+          <div class="slider-box">
+            <input type="range" id="slider" value="16" min="0" max="32" />
             <div id="progressBar"></div>
-          </form>
+          </div>
           <p class="price-box">
             <span id="price">$16.00</span> /month
           </p>
         </div>
         <div class="biling-container">
           <p>Monthly Billing</p>
-          <div class="toggle"><div></div></div>
+          <label class="toggle">
+            <input type="checkbox" id="check">
+            <span class="switch round"></span>
+          </label>
           <p>
             Yearly Billing <p class="discount">-25%<span> discount</span></p>
           </p>
